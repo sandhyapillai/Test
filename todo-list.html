@@ -1,0 +1,46 @@
+<html >
+<head>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.min.js"></script>
+<script type="text/javascript" src="todo-list.js"></script> 
+<style>
+
+div.container{
+  margin:20px 
+}
+h3{
+  font-weight:bold;
+}
+
+div.container div{
+  margin-top:20px;
+}
+
+input[type=checkbox]{
+  margin-right:10px;
+}
+
+.completed-true{
+  text-decoration:line-through
+}
+</style>
+</head>
+<body ng-app="todoApp">
+   <div class="container" ng-controller="listController">
+    <h3>TODO LIST</h3>
+    <div>
+      <input type="text" ng-model="item"  size="40px" maxlength="100"/>
+      <button type="button" ng-click="addNew(item)">Add new item</button>
+    </div>
+    
+    <div class="list_container">
+      <ul>
+        <li ng-repeat="item in listItems">
+        <input type="checkbox" checked={{item.completed}} ng-model="item.completed"/>
+        <span >{{item.text}}</span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+</body>
+</html>

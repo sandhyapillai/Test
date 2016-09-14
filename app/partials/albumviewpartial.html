@@ -1,0 +1,13 @@
+<div>
+
+<div class="alert alert-danger" role="alert" ng-show="load_error_text">{{load_error_text}}</div>
+<h3>{{album_name}}   </h3>
+<div class="photo thumbnail" ng-repeat="photo in photos" >
+  <a href="/index.html#/photo/{{photo.filename}}">
+   <img ng-src="/media/{{album_name}}/thumb/{{photo.filename}}" >
+  </a>
+  <p>{{photo.description}}</p>
+  
+</div> 
+
+</div>

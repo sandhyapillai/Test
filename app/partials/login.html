@@ -1,0 +1,15 @@
+ <div ng-controller="loginCtrl" class=" panel panel-default panel-album">
+  <div class="panel-heading">Login</div>
+ <div class="panel-body">
+ <form action="/" id="loginForm">
+     <div>
+         UserName : <input type="text" name="username" ng-model="username"/></br></br>
+         Password : <input type="password" name="password" ng-model="password"/>
+         <div class="login">
+         <button type="button" class="btn btn-success submit" ng-click="submit()">Login</button>
+         <button type="button" class="btn btn-default submit" ng-click="cancel()">Cancel</button>
+         </div>
+     </div>
+ </form>
+ </div>
+</div>

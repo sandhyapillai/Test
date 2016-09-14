@@ -1,0 +1,38 @@
+ <div  style="padding:20px">
+       <input type="text" ng-model="searchBy" placeholder="Type to search..."> </br></br>
+       
+       <div>There are {{albumList.length}} available albums:</div>
+       <div class=" panel panel-default panel-album" ng-repeat="item in albumList | filter:{title:searchBy } | orderBy:'title'" >
+          <div class="panel-heading">
+             <a href="/index.html#/album/{{item.name}}">
+             {{$index+1}} - {{item.title}}
+             </a>
+             <span style="float:right">{{item.date}}</span>
+          </div>
+          <div class="panel-body">
+            {{item.description}}
+          </div>
+        </div>
+      <div style="clear:left"></div>
+      <form name="add-album-form">
+       <h3>Add New Album</h3>
+        <div class=" panel panel-default panel-album">
+          <div class="alert alert-danger" role="alert" ng-show="add_album_error">{{add_album_error}}</div>  
+          <div class="panel-heading">
+             <input type="text" placeholder="Title..." size=30 ng-model="addAlbum.title"/>
+             <span style="float:right"> 
+                 <input type="text" placeholder="yyyy-dd-mm..." size=15 ng-model="addAlbum.date"/>
+             </span>
+          </div>
+          <div class="panel-body">
+          <textarea placeholder="Description..." rows=4 style="width:100%" ng-model="addAlbum.description"></textarea>
+          </div>
+          <div class="panel-body">
+          <input placeholder="Shortname..." size=30  ng-model="addAlbum.name"></textarea>
+          </div>
+          <button type="button" class="btn btn-success submit" ng-click="addNewAlbum(addAlbum)">Add New Album</button>
+        </div>
+       </form>
+   </div>
+
+    </div>

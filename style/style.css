@@ -1,0 +1,41 @@
+body{
+	width:85%;
+	padding:20px;
+	margin:auto;
+}
+
+div.panel-album{
+    width:400px;
+    margin-right:20px;
+    float:left;
+}
+
+input[type=text]{
+    padding:3px;
+    border-radius:5px;
+    border: 1px solid #bbb;
+}
+textarea{
+    padding:3px;
+    border-radius:5px;
+    border: 1px solid #bbb;
+}
+
+button{
+    margin:0 0 10px 55px
+   
+}
+div.login{
+    float:right;
+    margin-top:10px;
+}
+.user_logged{
+    float:right;
+    padding:10px;
+}
+
+div.photo{
+    width:250px;
+    float:left;
+    margin-right:10px;
+}
